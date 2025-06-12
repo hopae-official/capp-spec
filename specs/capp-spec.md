@@ -1,4 +1,4 @@
-# CAPP Protocol Specification
+# CAPP Specification
 
 **Title**: Contextual Authentication Presentation Protocol (CAPP)  
 **Author**: Ace Shim (Hopae Inc.)  
