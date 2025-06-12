@@ -54,9 +54,24 @@ The use of Verifiable Credentials (VCs) often requires a verifier-issued challen
 
 4. **Automatic Presentation**
    - VP sent to verifier endpoint (HTTPS or DIDComm)
+  
+## 4. Flow Diagram
+```mermaid
+sequenceDiagram
+participant Holder
+participant Device
+participant Gate
+Holder->>Device: Configure Consent Profile  
+Device->>Device: Create CAPP-ready VP  
+Gate->>Device: Emit Trigger (NFC/QR/BLE)  
+Device->>Device: Match Consent Profile  
+Device->>Gate: Auto-send VP  
+Gate->>Gate: Validate VP  
+Gate->>Holder: Grant Access  
+```
+## 5. Examples
 
-
-## 4. Consent Profile Example
+### 5-1. Consent Profile Example
 ```json
 {
   "verifier": "did:example:building",
@@ -69,7 +84,7 @@ The use of Verifiable Credentials (VCs) often requires a verifier-issued challen
 ```
 
 
-## 5. VP Payload Format
+### 5-2. VP Payload Format
 ```json
 {
   "type": ["VerifiablePresentation", "CAPPPresentation"],
