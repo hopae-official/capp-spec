@@ -35,3 +35,7 @@ sudo apt install xml2rfc
 ```bash
 xml2rfc draft-shim-example-00.xml
 ```
+
+## Upload to IETF
+
+https://datatracker.ietf.org/submit
